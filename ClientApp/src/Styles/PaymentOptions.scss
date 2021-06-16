@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import "./Abstracts/mixins.scss";
+@import "./Abstracts/variables.scss";
+
+.payments {
+  height: auto;
+
+  //flex-direction: column;
+  .payments-container {
+    display: flex;
+
+    .page-left-navigation {
+      flex: 20%;
+    }
+
+    .page-left-navigation-hidden {
+      display: none;
+    }
+
+    .page-top-right-navigation-page-content {
+      flex: 80%;
+      display: flex;
+
+      flex-direction: column;
+
+      .top-right-navigation {
+        flex: 8%;
+      }
+      .page-content {
+        flex: 82%;
+        height: auto;
+        min-height: 60rem;
+
+        .payment-options {
+          height: auto;
+          width: 100%;
+          margin: 2rem auto;
+          padding: 2rem;
+          @include responsiveSite(phone) {
+            padding: 1rem;
+          }
+
+          .payment-options-container {
+            //loader
+            .loader-payment-options {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+
+              height: 200px;
+              width: 200px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            // display:flex;
+            // flex-direction: column;
+
+            .payment-options-container-header {
+              // flex: 20%;
+              height: 14rem;
+
+              .page-header-payment-options {
+                font-size: 2.7rem;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+
+                margin-bottom: 1.5rem;
+                border-bottom: 1px dotted $colorGrey;
+              }
+
+              .link-create-payment-option {
+                margin-bottom: 2rem;
+                float: right;
+                font-size: 1.4rem;
+                background-color: $secondaryColorLight;
+
+                //       $secondaryColorLight: #4680ff;
+                // $secondaryColor: #1a62ff;
+                padding: 1rem;
+
+                color: $colorWhite;
+                &:hover {
+                  background-color: $secondaryColor;
+                }
+
+                .icon-add-payment-option {
+                  vertical-align: middle;
+                  margin-right: 0.5rem;
+                }
+              }
+            }
+            .payment-options-list {
+              padding: 3rem 0;
+
+              height: auto;
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+              grid-gap: 0.5rem;
+              position: relative;
+              .container-no-payment-option-found {
+                top: 50%;
+                left: 50%;
+                position: absolute;
+
+                width: 80%;
+                transform: translate(-50%, -50%);
+                .container-no-payment-option-found-icon {
+                  text-align: center;
+                  color: $colorDanger;
+                }
+                .container-no-payment-option-found-text {
+                  text-align: center;
+                  h2 {
+                    font-size: 2.2rem;
+                    font-weight: 400;
+                    font-family: "Montserrat", sans-serif;
+                    margin-bottom: 2rem;
+                  }
+
+                  .link-create-payment-option {
+                    margin: 2rem auto;
+
+                    font-size: 1.4rem;
+                    background-color: $secondaryColorLight;
+
+                    //       $secondaryColorLight: #4680ff;
+                    // $secondaryColor: #1a62ff;
+                    padding: 1rem;
+
+                    color: $colorWhite;
+                    &:hover {
+                      background-color: $secondaryColor;
+                    }
+
+                    .icon-add-payment-option {
+                      vertical-align: middle;
+                      margin-right: 0.5rem;
+                    }
+                  }
+                }
+              }
+              ///
+              @include responsiveSite(phone) {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+                grid-gap: 0.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+// @import "./Abstracts/mixins.scss";
+// @import "./Abstracts/variables.scss";
+
+// .page-layout-payment-options {
+//   height: 100%;
+
+//   display: flex;
+//   flex-direction: column;
+//   .top-navigation {
+//     flex: 20%;
+//   }
+//   .left-navigation-dashboard-content {
+//     flex: 80%;
+//     display: flex;
+//     background-color: $colorBackgroundWhiteSmoke;
+//     .left-navigation {
+//       flex: 20%;
+//       // display: none;
+//       height: auto;
+//     }
+//     .page-content {
+//       flex: 80%;
+//       height: auto;
+//       min-height: 60rem;
+
+//       //page content
+
+//     }
+//   }
+//   .left-navigation-dashboard-content-toggle {
+//     flex: 80%;
+//     display: flex;
+//     background-color: $colorWhite;
+//     .left-navigation {
+//       flex: 5%;
+//       // display: none;
+//       height: auto;
+//     }
+//     .page-content {
+//       flex: 95%;
+//       height: auto;
+//       min-height: 60rem;
+
+//       //page content
+
+//       .payment-options {
+//         height: auto;
+//         width: 100%;
+//         margin: 2rem auto;
+//         padding: 2rem;
+//         @include responsiveSite(phone) {
+//           padding: 1rem;
+//         }
+
+//         .payment-options-container {
+//           //loader
+//           .loader-payment-options {
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             transform: translate(-50%, -50%);
+
+//             height: 200px;
+//             width: 200px;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//           }
+//           // display:flex;
+//           // flex-direction: column;
+
+//           .payment-options-container-header {
+//             // flex: 20%;
+//             height: 14rem;
+
+//             .page-header-payment-options {
+//               font-size: 2.7rem;
+//               font-family: "Montserrat", sans-serif;
+//               font-weight: 400;
+
+//               margin-bottom: 1.5rem;
+//               border-bottom: 1px dotted $colorGrey;
+//             }
+
+//             .link-create-payment-option {
+//               margin-bottom: 2rem;
+//               float: right;
+//               font-size: 1.4rem;
+//               background-color: $secondaryColorLight;
+
+//               //       $secondaryColorLight: #4680ff;
+//               // $secondaryColor: #1a62ff;
+//               padding: 1rem;
+
+//               color: $colorWhite;
+//               &:hover {
+//                 background-color: $secondaryColor;
+//               }
+
+//               .icon-add-payment-option {
+//                 vertical-align: middle;
+//                 margin-right: 0.5rem;
+//               }
+//             }
+//           }
+//           .payment-options-list {
+//             padding: 3rem 0;
+
+//             height: auto;
+//             display: grid;
+//             grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+//             grid-gap: 0.5rem;
+//             .container-no-payment-option-found {
+//               top: 50%;
+//               left: 50%;
+//               position: absolute;
+
+//               width: 80%;
+//               transform: translate(-50%, -50%);
+//               .container-no-payment-option-found-icon {
+//                 text-align: center;
+//                 color: $colorDanger;
+//               }
+//               .container-no-payment-option-found-text {
+//                 text-align: center;
+//                 h2 {
+//                   font-size: 2.2rem;
+//                   font-weight: 400;
+//                   font-family: "Montserrat", sans-serif;
+//                   margin-bottom: 2rem;
+//                 }
+
+//                 .link-create-payment-option {
+//                   margin: 2rem auto;
+
+//                   font-size: 1.4rem;
+//                   background-color: $secondaryColorLight;
+
+//                   //       $secondaryColorLight: #4680ff;
+//                   // $secondaryColor: #1a62ff;
+//                   padding: 1rem;
+
+//                   color: $colorWhite;
+//                   &:hover {
+//                     background-color: $secondaryColor;
+//                   }
+
+//                   .icon-add-payment-option {
+//                     vertical-align: middle;
+//                     margin-right: 0.5rem;
+//                   }
+//                 }
+//               }
+//             }
+//             ///
+//             @include responsiveSite(phone) {
+//               display: grid;
+//               grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+//               grid-gap: 0.2rem;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

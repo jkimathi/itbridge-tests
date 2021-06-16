@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import "./Abstracts/mixins.scss";
+@import "./Abstracts/variables.scss";
+.navigation-booking {
+  background-color: $colorWhite;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 9.2rem;
+  width: 100%;
+  padding: 1rem 3rem;
+
+  ul {
+    list-style: none;
+    display: flex;
+    float: right;
+    justify-content: baseline;
+    align-items: center;
+    li {
+      display: inline-block;
+      margin: 2rem;
+      a {
+        font-size: 1.6rem;
+        color: $primaryColorDark;
+
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        &::after {
+          content: "";
+          display: block;
+          width: 30%;
+          height: 0.5rem;
+          margin-top: 1rem;
+          background: transparent;
+          transition: all 1s ease-out;
+        }
+
+        &:hover {
+          &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 0.5rem;
+            margin-top: 1rem;
+            background: $primaryColor;
+            transition: all 1s ease-out;
+          }
+        }
+      }
+    }
+  }
+}

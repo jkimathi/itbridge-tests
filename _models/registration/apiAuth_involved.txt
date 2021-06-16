@@ -1,0 +1,6 @@
+
+ [HttpGet("languages")]
+ [HttpGet("countries/{languageID}")]
+ [HttpGet("return/secret_user/given/username/{username}")]
+ [HttpGet("return/country/given/iso3/{country_iso3}")]
+ [HttpGet("genders/{languageID}")]

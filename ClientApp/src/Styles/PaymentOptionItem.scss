@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import "./Abstracts/mixins.scss";
+@import "./Abstracts/variables.scss";
+.payment-option-item-card {
+  width: 96%;
+  height: 15rem;
+  margin: 0 auto;
+
+  background-color: $colorWhite;
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .payment-option-item-itemName {
+    flex: 90%;
+
+    padding: 3rem 1.5rem 0 1.5rem;
+
+    h2 {
+      padding: 0.7rem 0;
+      font-size: 1.8rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      color: $colorGrey;
+      span {
+        margin-left: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .payment-option-item-action-status {
+    flex: 10%;
+
+    display: flex;
+    align-items: center;
+    @include responsiveSite(phone) {
+      flex-direction: column;
+    }
+    .icon-payment-option-item-action {
+      color: $secondaryColorLight;
+      vertical-align: middle;
+      margin-right: 1rem;
+    }
+
+    .icon-payment-option-item-action-delete {
+      color: $colorRedLighter;
+      vertical-align: middle;
+      margin-right: 1rem;
+    }
+
+    .payment-option-item-action-view {
+      flex: 33.3%;
+      @include responsiveSite(phone) {
+        flex: 100%;
+        width: 100%;
+      }
+
+      text-align: center;
+      font-size: 1.6rem;
+      padding: 1.5rem;
+      cursor: pointer;
+      a {
+        color: $secondaryColorLight;
+      }
+
+      &:hover {
+        background-color: $secondaryColorLight;
+        transition: all 0.3s ease;
+
+        a {
+          color: $colorWhite;
+          transition: all 0.3s ease;
+
+          text-align: center;
+        }
+        .icon-payment-option-item-action {
+          color: $colorWhite;
+        }
+      }
+      // .action-link-homepage {
+      //   font-size: 1.4rem;
+      //   text-align: center;
+      //   vertical-align: middle;
+      // }
+    }
+    // .payment-option-item-action-edit {
+    //   flex: 33.3%;
+    //   @include responsiveSite(phone) {
+    //     flex: 100%;
+    //     width: 100%;
+    //   }
+    //   text-align: center;
+    //   font-size: 1.6rem;
+    //   padding: 1.5rem;
+    //   cursor: pointer;
+    //   a {
+    //     color: $secondaryColorLight;
+    //   }
+
+    //   &:hover {
+    //     background-color: $secondaryColorLight;
+    //     transition: all 0.3s ease;
+
+    //     a {
+    //       color: $colorWhite;
+    //       transition: all 0.3s ease;
+
+    //       text-align: center;
+    //     }
+    //     .icon-payment-option-item-action {
+    //       color: $colorWhite;
+    //     }
+    //   }
+    // }
+    .payment-option-item-action-delete {
+      flex: 33.3%;
+      @include responsiveSite(phone) {
+        flex: 100%;
+        width: 100%;
+      }
+      text-align: center;
+      font-size: 1.6rem;
+      padding: 1.5rem;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      outline: none;
+      height: 100%;
+      color: $colorRedLighter;
+
+      a {
+        color: $secondaryColorLight;
+      }
+
+      &:hover {
+        background-color: $colorRed;
+        transition: all 0.3s ease;
+
+        color: $colorWhite;
+
+        text-align: center;
+
+        .icon-payment-option-item-action {
+          color: $colorWhite;
+        }
+        .icon-payment-option-item-action-delete {
+          color: $colorWhite;
+          vertical-align: middle;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}

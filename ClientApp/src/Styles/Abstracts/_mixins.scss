@@ -1,0 +1,378 @@
+@mixin leftCenteredElement {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+//btn customer completed booking
+@mixin btn-action-completed-booking {
+  background-color: $secondaryColorLight;
+  border: none;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  &:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+//btn customer completed booking
+// @mixin btn-action-completed-booking {
+//   background-color: $secondaryColorLight;
+//   border: none;
+//   padding: 1.2rem 1rem;
+//   text-align: center;
+//   color: #fff;
+//   display: inline-block;
+//   text-decoration: none;
+//   font-size: 1.6rem;
+
+//   text-transform: uppercase;
+
+//   cursor: pointer;
+//   -webkit-transition-duration: 0.4s; /* Safari */
+//   transition-duration: 0.4s;
+//   &:hover {
+//     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+//       0 17px 50px 0 rgba(0, 0, 0, 0.19);
+//   }
+// }
+
+//company booking card content row
+@mixin companyBookingCardContent($flexsize) {
+  flex: $flexsize;
+
+  padding: 0.2rem 1.5rem;
+
+  h2 {
+    // padding: 0.7rem 0;
+    font-size: 1.8rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: $colorGrey;
+    span {
+      margin-left: 1rem;
+      font-weight: 600;
+    }
+  }
+}
+
+//booking company icons
+@mixin bookingCompanyIconstatus {
+  .icon-company-seat-status {
+    vertical-align: middle;
+  }
+  .completed {
+    color: $colorGreen;
+  }
+  .uncompleted {
+    color: $colorDanger;
+  }
+}
+
+//card action delete
+@mixin card-action-delete($flexsize) {
+  flex: $flexsize;
+  @include responsiveSite(phone) {
+    flex: 100%;
+    width: 100%;
+  }
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 100%;
+  color: $colorWhite;
+  background-color: $colorRedLighter;
+  a {
+    color: $secondaryColorLight;
+  }
+
+  &:hover {
+    background-color: $colorRed;
+    transition: all 0.3s ease;
+
+    color: $colorWhite;
+
+    text-align: center;
+
+    .icon-company-action {
+      color: $colorWhite;
+    }
+  }
+}
+//card action view
+@mixin card-action-view($flexsize) {
+  flex: $flexsize;
+  @include responsiveSite(phone) {
+    flex: 100%;
+    width: 100%;
+  }
+
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  a {
+    color: $secondaryColorLight;
+  }
+  .icon-company-action {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+
+  &:hover {
+    background-color: $secondaryColorLight;
+    transition: all 0.3s ease;
+
+    a {
+      color: $colorWhite;
+      transition: all 0.3s ease;
+
+      text-align: center;
+    }
+    .icon-company-action {
+      color: $colorWhite;
+      vertical-align: middle;
+    }
+  }
+}
+
+@mixin btn-action($secondaryColorLight) {
+  background-color: $secondaryColorLight;
+  border: none;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  width: 20%;
+  margin: 1rem 1rem;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  &:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+//box shadow
+
+@mixin boxShadow {
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+@mixin form-control-with-animation {
+  height: 4rem;
+  width: 100%;
+  position: relative;
+  margin: 4.5rem auto;
+  input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #757575;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  /* active state */
+  input:focus ~ label,
+  input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #4680ff;
+  }
+  label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+
+  /* BOTTOM input-undelineS ================================= */
+  .input-undeline {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .input-undeline:before,
+  .input-undeline:after {
+    content: "";
+    height: 0.1rem;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #4680ff;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  .input-undeline:before {
+    left: 50%;
+  }
+  .input-undeline:after {
+    right: 50%;
+  }
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+  }
+
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+    from {
+      background: #4680ff;
+    }
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+  @-moz-keyframes inputHighlighter {
+    from {
+      background: #4680ff;
+    }
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+  @keyframes inputHighlighter {
+    from {
+      background: #4680ff;
+    }
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+  /* active state */
+  input:focus ~ .input-undeline:before,
+  input:focus ~ .input-undeline:after {
+    width: 50%;
+  }
+}
+
+//grid mixins
+@mixin contentGrid($contentWidth, $gridGap) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($contentWidth, 1fr));
+  grid-gap: $gridGap;
+}
+
+//center element inside page
+@mixin centerElements {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+/**
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+
+@mixin responsiveSite($breakpoint) {
+  @if $breakpoint == small-phone {
+    @media only screen and (max-width: 23rem) {
+      //368px
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5rem) {
+      //600px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      //1800px
+      @content;
+    }
+  }
+}

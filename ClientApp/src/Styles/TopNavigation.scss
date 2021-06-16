@@ -1,0 +1,263 @@
+@import "./Abstracts/variables.scss";
+.top-navigation {
+  height: 8rem;
+  background-color: $colorWhite;
+
+  //box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  z-index: 1;
+  .top-nav-content {
+    width: 100%;
+    height: 100%;
+    // padding: 0 2rem;
+    display: flex;
+
+    .top-nav-brand {
+      flex: 20%;
+      display: flex;
+      align-items: center;
+
+      .top-nav-brand {
+        // padding-left: 1rem;
+        margin: 0 2rem;
+
+        h2 {
+          // padding: 0 0.5rem;
+          color: $primaryColor;
+        }
+      }
+    }
+    .top-nav-content-action-menu-btn-container {
+      align-items: flex-end;
+      //padding: 0 2rem;
+      flex: 80%;
+
+      display: flex;
+      align-items: center;
+
+      .menu-btn {
+        flex: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .top-nav-menu-icon {
+          cursor: pointer;
+          margin-left: 1.5rem;
+        }
+        span {
+          margin-left: 1.5rem;
+          font-size: 1.8rem;
+        }
+      }
+      .top-nav-content-action {
+        flex: 50%;
+        height: 100%;
+        display: flex;
+
+        // display: inline;
+        .action-icon {
+          flex: 50%;
+        }
+        .action-text {
+          flex: 50%;
+          // margin: 3rem 3rem 3rem 0;
+          // margin-top: 3rem;
+          // margin-left: 0;
+          // margin-right: 0;
+          // margin-bottom: 3rem;
+          display: flex;
+          align-items: center;
+
+          .action-icon {
+            flex: 15%;
+
+            .btn-top-action {
+              color: $primaryColor;
+
+              // margin: 3rem;
+              background-color: transparent;
+              border: none;
+              outline: none;
+
+              cursor: pointer;
+            }
+          }
+
+          .text {
+            flex: 70%;
+            // margin: 3rem 0;
+
+            h2 {
+              color: grey;
+            }
+          }
+
+          .logout-link {
+            flex: 15%;
+            text-align: start;
+
+            a {
+              color: $colorGrey;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// @import "./Abstracts/variables.scss";
+// .top-navigation {
+//   height: 8rem;
+//   background-color: white;
+
+//   //box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+//   box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.2);
+//   transition: 0.3s;
+//   z-index: 1;
+//   .top-nav-content {
+//     width: 100%;
+//     height: 100%;
+//     // padding: 0 2rem;
+//     display: flex;
+
+//     .top-nav-brand {
+//       flex: 20%;
+//       display: flex;
+//       align-items: center;
+
+//       .top-nav-brand {
+//         // padding-left: 1rem;
+//         margin: 0 2rem;
+
+//         h2 {
+//           // padding: 0 0.5rem;
+//           color: $primaryColor;
+//         }
+//       }
+//     }
+//     .top-nav-content-action-menu-btn-container {
+//       align-items: flex-end;
+//       //padding: 0 2rem;
+//       flex: 80%;
+
+//       display: flex;
+//       align-items: center;
+
+//       .menu-btn {
+//         flex: 50%;
+//         height: 100%;
+//         display: flex;
+//         align-items: center;
+
+//         .top-nav-menu-icon {
+//           cursor: pointer;
+//         }
+//         span {
+//           margin-left: 1.5rem;
+//           font-size: 1.8rem;
+//         }
+//       }
+//       .top-nav-content-action {
+//         flex: 50%;
+//         height: 100%;
+//         display: flex;
+
+//         // display: inline;
+//         .action-icon {
+//           flex: 50%;
+//         }
+//         .action-text {
+//           flex: 50%;
+//           // margin: 3rem 3rem 3rem 0;
+//           // margin-top: 3rem;
+//           // margin-left: 0;
+//           // margin-right: 0;
+//           // margin-bottom: 3rem;
+//           display: flex;
+//           align-items: center;
+//           .action-icon {
+//             flex: 20%;
+//             .btn-top-action {
+//               color: $primaryColor;
+
+//               // margin: 3rem;
+//               background-color: transparent;
+//               border: none;
+//               outline: none;
+
+//               cursor: pointer;
+//             }
+//           }
+
+//           .text {
+//             flex: 80%;
+//             // margin: 3rem 0;
+
+//             h2 {
+//               color: grey;
+//             }
+//           }
+//         }
+
+//         // .action-profile-dropdown {
+//         //   min-width: 16rem;
+//         //   display: none;
+//         //   height: auto;
+//         //   background-color: whitesmoke;
+//         //   margin-top: 0.5rem;
+//         //   a {
+//         //     float: none;
+//         //     color: $primaryColor;
+//         //     text-decoration: none;
+//         //     display: block;
+//         //     padding: 1.2rem 1.6rem;
+//         //     font-size: 1.4rem;
+//         //     .top-nav-icon-dropdown {
+//         //       vertical-align: middle;
+//         //       margin-right: 0.5rem;
+//         //     }
+
+//         //     &:hover {
+//         //       background-color: $primaryColor;
+//         //       color: whitesmoke;
+//         //       transition: all 0.3s ease;
+//         //       box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+//         //     }
+//         //   }
+//         // }
+
+//         // li {
+//         //   list-style: none;
+//         //   display: inline-block;
+//         //   margin: 2rem;
+
+//         //   cursor: pointer;
+//         //   .top-nav-con {
+//         //     color: $primaryColor;
+//         //   }
+//         // }
+
+//         // .top-nav-user-action-container {
+//         //   margin-top: 5rem;
+//         //   width: 15rem;
+//         //   height: 6rem;
+//         //   right: 0;
+//         //   float: right;
+//         // }
+//         //   .top-nav-content-action-notification {
+//         //     display: inline;
+//         //     .top-nav-con {
+//         //       color: orangered;
+//         //     }
+//         //   }
+//         //   .top-nav-content-action-user {
+//         //     .top-nav-con {
+//         //       color: orangered;
+//         //     }
+//         //   }
+//       }
+//     }
+//   }
+// }

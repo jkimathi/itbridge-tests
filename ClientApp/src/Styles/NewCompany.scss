@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import "./Abstracts/mixins.scss";
+@import "./Abstracts/variables.scss";
+
+.newcompany {
+  height: auto;
+
+  //flex-direction: column;
+  .newcompany-container {
+    display: flex;
+
+    .page-left-navigation {
+      flex: 20%;
+    }
+
+    .page-left-navigation-hidden {
+      display: none;
+    }
+
+    .page-top-right-navigation-page-content {
+      flex: 80%;
+      display: flex;
+
+      flex-direction: column;
+
+      .top-right-navigation {
+        flex: 8%;
+      }
+      .page-content {
+        flex: 82%;
+        height: auto;
+        min-height: 60rem;
+
+        .new-company {
+          height: auto;
+
+          padding: 3rem 0;
+          .new-company-form-container {
+            width: 96%;
+            margin: 0 auto;
+            padding: 2rem;
+            .companies-container-header {
+              // flex: 20%;
+              height: 14rem;
+
+              .page-header-companies {
+                font-size: 2.7rem;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+
+                margin-bottom: 1.5rem;
+                border-bottom: 1px dotted $colorGrey;
+              }
+            }
+
+            .create-company-alert {
+              background-color: $colorAlertBackground;
+              border-color: transparent;
+              color: $colorAlert;
+              padding: 1rem;
+              font-size: 1.6rem;
+              height: 5rem;
+            }
+            .loader-icon-create-company {
+              height: 8rem;
+              width: auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            //required field label
+            .required-field {
+              color: $colorRed;
+              font-size: 1.4rem;
+            }
+            .form-new-company {
+              display: flex;
+              @include responsiveSite(tab-land) {
+                flex-direction: column;
+              }
+              .form-new-company-left {
+                flex: 50%;
+                padding: 1rem 1rem 1rem 0;
+
+                .form-control {
+                  height: 4rem;
+                  width: 100%;
+                  position: relative;
+                  margin: 3rem auto;
+
+                  input {
+                    width: 100%;
+
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    border-bottom: 2px solid silver;
+                    font-size: 1.7rem;
+                  }
+                  label {
+                    position: absolute;
+                    bottom: 3rem;
+                    left: 0;
+                    color: $primaryColor;
+                    pointer-events: none;
+                    font-size: 1.5rem;
+                    transition: all 0.3s ease;
+                  }
+
+                  select {
+                    width: 100%;
+
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    border-bottom: 2px solid silver;
+                    font-size: 1.7rem;
+                  }
+
+                  textarea {
+                    width: 100%;
+
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    border-bottom: 2px solid silver;
+                    font-size: 1.7rem;
+                  }
+                }
+
+                .form-control-check-box {
+                  height: 4rem;
+                  width: 100%;
+                  position: relative;
+                  margin: 3rem auto;
+
+                  .IsPaymentOnProductLevel {
+                    span {
+                      color: $secondaryColorLight;
+                      margin-left: 1rem;
+                      font-size: 1.6rem;
+                    }
+                  }
+
+                  textarea {
+                    width: 100%;
+
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    border-bottom: 2px solid silver;
+                    font-size: 1.7rem;
+                  }
+                  label {
+                    position: absolute;
+                    bottom: 3rem;
+                    left: 0;
+                    color: $primaryColor;
+                    pointer-events: none;
+                    font-size: 1.5rem;
+                    transition: all 0.3s ease;
+                  }
+                }
+              }
+              .form-new-company-right {
+                flex: 50%;
+                padding: 1rem 2rem;
+                @include responsiveSite(tab-land) {
+                  padding: 0;
+                }
+                .form-control-logo {
+                  height: auto;
+                  max-height: 15rem;
+                  display: flex;
+
+                  margin-bottom: 2rem;
+
+                  .title-control {
+                    flex: 50%;
+                    label {
+                      color: #4680ff;
+                      pointer-events: none;
+                      font-size: 1.5rem;
+                      transition: all 0.3s ease;
+                    }
+                    .controls {
+                      margin: 1rem auto;
+
+                      .icon {
+                        color: $colorGrey;
+
+                        transition: all 1s ease-out;
+                        &:hover {
+                          color: $primaryColor;
+                          cursor: pointer;
+                          transition: all 1s ease-out;
+                          cursor: pointer;
+                        }
+                      }
+                    }
+                  }
+                  .image-preview-container {
+                    flex: 50%;
+
+                    img {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                    }
+                  }
+                }
+
+                .form-control {
+                  height: 4rem;
+                  width: 100%;
+                  position: relative;
+                  margin: 3rem auto;
+
+                  .IsPaymentOnProductLevel {
+                    span {
+                      color: $secondaryColorLight;
+                      margin-left: 1rem;
+                      font-size: 1.6rem;
+                    }
+                  }
+
+                  textarea {
+                    width: 100%;
+
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    border-bottom: 2px solid silver;
+                    font-size: 1.7rem;
+                  }
+                  label {
+                    position: absolute;
+                    bottom: 3rem;
+                    left: 0;
+                    color: $primaryColor;
+                    pointer-events: none;
+                    font-size: 1.5rem;
+                    transition: all 0.3s ease;
+                  }
+                }
+
+                .form-control-log {
+                  .image-preview {
+                    width: 20rem;
+                    height: 20rem;
+                  }
+                }
+              }
+            }
+          }
+
+          .btn-create-company {
+            width: 20%;
+            height: 4rem;
+            margin: 0.2rem auto;
+            background-color: $secondaryColorLight;
+
+            border: none;
+            color: white;
+            font-size: 1.7rem;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            display: inline-block;
+            outline: none;
+
+            &:hover {
+              background-color: $primaryColor;
+            }
+          }
+
+          .btn-update-company {
+            width: 20%;
+            height: 4rem;
+            margin: 0.2rem 0.5rem;
+            background-color: $colorDanger;
+
+            border: none;
+            color: white;
+            font-size: 1.7rem;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            display: inline-block;
+            outline: none;
+
+            &:hover {
+              background-color: $colorRed;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import "./Abstracts/mixins.scss";
+@import "./Abstracts/variables.scss";
+.BacktoTop {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  z-index: 2;
+  color: $colorWhite;
+  cursor: pointer;
+  transition: all 1s ease-in;
+  color: $secondaryColorLight;
+  // float: right;
+
+  .icon {
+    // margin: 5px;
+    padding: 4px;
+    border: 1px solid $secondaryColorLight;
+    border-radius: 50%;
+    color: $secondaryColorLight;
+    background-color: $secondaryColorLight;
+    // border-radius: 50%;
+    color: $colorWhite;
+    transition: all 3s ease-out;
+    &:hover {
+      background-color: $secondaryColorLight;
+      // border-radius: 50%;
+      color: $colorWhite;
+      padding: 5px;
+      border: 1px solid $secondaryColorLight;
+      transition: all 1s ease-out;
+      cursor: pointer;
+    }
+  }
+}
+.showBackToTop {
+  display: block;
+}

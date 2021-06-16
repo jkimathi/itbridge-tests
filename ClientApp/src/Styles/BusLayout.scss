@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import "./Abstracts/mixins.scss";
+@import "./Abstracts/variables.scss";
+.bus-layout-container {
+  background-color: $colorWhite;
+  height: 100%;
+  padding: 1rem 2rem;
+
+  .bus-layout {
+    background-color: $colorWhite;
+    height: 100%;
+    width: 80%;
+
+    margin: 0 auto;
+    .bus {
+      width: 90%;
+      margin: 0 auto;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem;
+      border: 5px solid #d8d8d8;
+      .driver-section {
+        flex: 20%;
+      }
+      .passenger-section {
+        flex: 80%;
+        display: flex;
+        max-width: 40rem;
+
+        .bus-row-seats {
+          flex: 45%;
+
+          // padding: 1rem 0.5rem;
+          .ol {
+            list-style: none;
+          }
+          .bus-seats {
+            /*
+             display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+      grid-gap: 0.5rem;*/
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+            grid-gap: 0.5rem;
+
+            /**
+            
+                            <div className="bus-seats">
+                                <div className="seat">
+            */
+          }
+
+          .seats {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            //justify-content: flex-start;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            .seat {
+              display: flex;
+              flex: 0 0 14.28571428571429%;
+              padding: 5px;
+              position: relative;
+
+              &:nth-child(3) {
+                margin-right: 14.28571428571429%;
+              }
+            }
+          }
+        }
+        // .bus-row-gap {
+        //   flex: 10%;
+        //   background-color: red;
+        //   padding: 1rem 0.5rem;
+        // }
+        // .bus-right-row-seats {
+        //   flex: 45%;
+        //   background-color: pink;
+        //   padding: 1rem 0.5rem;
+        // }
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import "./Abstracts/mixins.scss";
+@import "./Abstracts/variables";
+
+.payment-reference {
+  .payment-reference-container {
+    // url("../Assets/contactus-large.jpg");
+    //background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.6),
+        rgba($primaryColorDark, 0.5)
+      ),
+      url("../Assets/account-1778_640.jpg");
+    background-position: center;
+    height: 25rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .payment-reference-header {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      width: 90%;
+      margin: 0 auto;
+      // height: 30rem;
+
+      .payment-reference-header-content {
+        .payment-reference-header-title {
+          text-align: center;
+          color: $colorWhite;
+          font-size: 3.5rem;
+          color: $colorWhite;
+
+          font-family: "Montserrat", sans-serif;
+          font-weight: 600;
+          margin-top: 1rem;
+        }
+
+        .payment-reference-sub-header-title {
+          font-size: 2.5rem;
+          text-align: center;
+          color: $colorWhite;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 400;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .payment-refence-form-container {
+    background-color: $colorWhite;
+    box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    height: auto;
+    min-height: 45rem;
+    width: 96%;
+    margin: 2rem auto;
+    padding-top: 3rem;
+
+    .loader-icon {
+      height: 8rem;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .error-message {
+      background-color: $colorAlertBackground;
+      border-color: transparent;
+      color: $colorAlert;
+      height: 8rem;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+      margin: 0 auto;
+      p {
+        font-size: 1.6rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+      }
+    }
+    .submit-success-message {
+      color: $colorSuccesssAlert;
+      background-color: $colorSuccesssAlertbackground;
+      border-color: $colorSuccesssAlertborder;
+      height: 8rem;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+      margin: 0 auto;
+      p {
+        font-size: 1.6rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+      }
+    }
+    .payment-refence-form-control {
+      width: 40%;
+      margin: 0 auto;
+      padding: 2rem;
+      .required-field {
+        color: $colorRedLighter;
+        font-size: 1.4rem;
+      }
+
+      .form-control {
+        height: 4rem;
+        width: 100%;
+        position: relative;
+        margin: 3rem auto;
+
+        input {
+          width: 100%;
+
+          height: 100%;
+          border: none;
+          background-color: transparent;
+          outline: none;
+          border-bottom: 2px solid $colorSilver;
+          font-size: 1.7rem;
+        }
+        label {
+          position: absolute;
+          bottom: 3rem;
+          left: 0;
+          color: $primaryColorDark;
+          pointer-events: none;
+          font-size: 1.5rem;
+          transition: all 0.3s ease;
+        }
+
+        .btn-submit-ref {
+          width: 100%;
+          height: 4rem;
+          margin: 0.2rem auto;
+          background-color: $secondaryColorLight;
+
+          border: none;
+          color: $colorWhite;
+          font-size: 1.7rem;
+          cursor: pointer;
+          -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+          text-decoration: none;
+          display: inline-block;
+          outline: none;
+
+          &:hover {
+            background-color: #1a62ff;
+          }
+        }
+      }
+    }
+  }
+}

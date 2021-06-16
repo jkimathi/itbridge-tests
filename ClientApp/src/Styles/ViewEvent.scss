@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import "./Abstracts/mixins.scss";
+@import "./Abstracts/variables.scss";
+
+.newevent {
+  height: auto;
+
+  //flex-direction: column;
+  .newevent-container {
+    display: flex;
+
+    .page-left-navigation {
+      flex: 20%;
+    }
+
+    .page-left-navigation-hidden {
+      display: none;
+    }
+
+    .page-top-right-navigation-page-content {
+      flex: 80%;
+      display: flex;
+
+      flex-direction: column;
+
+      .top-right-navigation {
+        flex: 8%;
+      }
+      .page-content {
+        flex: 82%;
+        height: auto;
+        min-height: 60rem;
+        .new-event {
+          height: auto;
+          //background-color: white;
+
+          padding: 3rem 0;
+          .new-event-form-container {
+            width: 96%;
+            margin: 0 auto;
+            padding: 2rem;
+            .new-event-container-header {
+              // flex: 20%;
+              height: 14rem;
+
+              .page-header-new-event {
+                font-size: 2.7rem;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+
+                margin-bottom: 1.5rem;
+                border-bottom: 1px dotted $colorGrey;
+              }
+            }
+
+            .event-summary {
+              height: auto;
+
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 2rem;
+              .header {
+                flex: 15%;
+                h2 {
+                  font-size: 2.7rem;
+                  font-family: "Montserrat", sans-serif;
+                  font-weight: 400;
+
+                  margin-bottom: 1.5rem;
+                  border-bottom: 1px dotted $colorGrey;
+                }
+              }
+
+              .charts-stat {
+                flex: 85%;
+                display: flex;
+                .chart-tickets {
+                  flex: 50%;
+                  margin: 0 0.2rem;
+                  @include boxShadow;
+                }
+                .chart-cash {
+                  flex: 50%;
+                  margin: 0 0.2rem;
+                  @include boxShadow;
+                }
+              }
+            }
+
+            .create-event-alert {
+              background-color: $colorAlertBackground;
+              border-color: transparent;
+              color: $colorAlert;
+              padding: 1rem;
+              font-size: 1.6rem;
+              height: 5rem;
+            }
+            .loader-icon-create-event {
+              height: 8rem;
+              width: auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            //required field label
+            .required-field {
+              color: $colorRed;
+              font-size: 1.4rem;
+            }
+            .form-new-event {
+              display: flex;
+              @include responsiveSite(tab-land) {
+                flex-direction: column;
+              }
+              .form-new-event-left {
+                flex: 50%;
+                padding: 1rem 1rem 1rem 0;
+
+                .form-control {
+                  height: 4rem;
+                  width: 100%;
+                  position: relative;
+                  margin: 3rem auto;
+
+                  input {
+                    width: 100%;
+
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    border-bottom: 2px solid silver;
+                    font-size: 1.7rem;
+                  }
+                  label {
+                    position: absolute;
+                    bottom: 3rem;
+                    left: 0;
+                    color: $primaryColor;
+                    pointer-events: none;
+                    font-size: 1.5rem;
+                    transition: all 0.3s ease;
+                  }
+
+                  select {
+                    width: 100%;
+
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    border-bottom: 2px solid silver;
+                    font-size: 1.7rem;
+                  }
+                }
+              }
+              .form-new-event-right {
+                flex: 50%;
+                padding: 1rem 2rem;
+                @include responsiveSite(tab-land) {
+                  padding: 0;
+                }
+
+                .form-control {
+                  height: 4rem;
+                  width: 100%;
+                  position: relative;
+                  margin: 3rem auto;
+
+                  h2 {
+                    // padding: 0.7rem 0;
+                    font-size: 1.6rem;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 400;
+                    color: $primaryColor;
+                    span {
+                      margin-left: 1rem;
+                      font-weight: 600;
+                    }
+                    .status-active {
+                      background-color: $colorGreen;
+                      padding: 0.4rem 1.5rem;
+                      border-radius: 0.4rem;
+                      color: $colorWhite;
+                      font-size: 1.6rem;
+                      font-weight: 400;
+                      .icon-company-status {
+                        vertical-align: middle;
+                        margin-right: 0.7rem;
+                      }
+                    }
+                    .status-not-active {
+                      background-color: $colorDanger;
+                      padding: 0.4rem 1.5rem;
+                      border-radius: 0.4rem;
+                      color: $colorWhite;
+                      font-size: 1.6rem;
+                      font-weight: 400;
+                      .icon-company-status {
+                        vertical-align: middle;
+                        margin-right: 0.7rem;
+                      }
+                    }
+                  }
+
+                  input {
+                    width: 100%;
+
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    border-bottom: 2px solid silver;
+                    font-size: 1.7rem;
+                  }
+
+                  label {
+                    position: absolute;
+                    bottom: 3rem;
+                    left: 0;
+                    color: $primaryColor;
+                    pointer-events: none;
+                    font-size: 1.5rem;
+                    transition: all 0.3s ease;
+                  }
+                }
+              }
+            }
+          }
+
+          .btn-create-event {
+            width: 20%;
+            height: 4rem;
+            margin: 0.2rem auto;
+            background-color: $secondaryColorLight;
+
+            border: none;
+            color: white;
+            font-size: 1.7rem;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            // display: inline-block;
+            // outline: none;
+
+            &:hover {
+              background-color: $primaryColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

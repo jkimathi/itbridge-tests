@@ -1,0 +1,13 @@
+@import "./Abstracts/main.scss";
+
+.search-page-results {
+  .search-page-results-container {
+    .search-result {
+      // margin-bottom: 4rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+      grid-gap: 0.5rem;
+    }
+  }
+}

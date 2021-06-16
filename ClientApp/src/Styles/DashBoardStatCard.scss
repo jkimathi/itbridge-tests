@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import "./Abstracts/mixins.scss";
+@import "./Abstracts/variables.scss";
+.DashBoardStatCard {
+  width: 100%;
+
+  @include contentGrid(25rem, 1rem);
+
+  .stat-card {
+    height: 15rem;
+    background-color: $colorWhite;
+    cursor: pointer;
+    // padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    @include boxShadow;
+    .stat-value-icon {
+      flex: 70%;
+      display: flex;
+      .stat-icon {
+        flex: 40%;
+
+        padding-left: 1rem;
+        padding-top: 2.2rem;
+        color: $colorGrey;
+      }
+      .stat-value {
+        flex: 60%;
+        padding-left: 1rem;
+        padding-top: 1rem;
+
+        h2 {
+          font-family: "Source+Sans+Pro", sans-serif;
+          font-weight: 300;
+          color: $primaryColorDark;
+          // padding: 1rem;
+          padding-right: 1rem;
+          padding-top: 1rem;
+          align-self: center;
+          font-size: 4rem;
+          text-align: end;
+        }
+        .Received-Amount {
+          color: $colorGreen;
+          font-family: "Source+Sans+Pro", sans-serif;
+          font-weight: 300;
+
+          // padding: 1rem;
+          padding-right: 1rem;
+          padding-top: 1rem;
+          align-self: center;
+          font-size: 4rem;
+          text-align: end;
+        }
+
+        .Outstanding-Amount {
+          color: $colorDanger;
+          font-family: "Source+Sans+Pro", sans-serif;
+          font-weight: 300;
+
+          // padding: 1rem;
+          padding-right: 1rem;
+          padding-top: 1rem;
+          align-self: center;
+          font-size: 4rem;
+          text-align: end;
+        }
+      }
+    }
+    .stat-title {
+      flex: 30%;
+      padding: 0.4rem 1rem;
+
+      h2 {
+        font-size: 2.5rem;
+
+        font-family: "Source+Sans+Pro", sans-serif;
+        font-weight: 300;
+        line-height: 1.3;
+
+        color: $colorGrey;
+      }
+    }
+
+    // .stat-name {
+    //   flex: 60%;
+
+    //   padding-left: 1rem;
+    //   h2 {
+    //     font-size: 2.5rem;
+
+    //     font-family: "Source+Sans+Pro", sans-serif;
+    //     font-weight: 300;
+    //     line-height: 1.3;
+
+    //     color: $colorGrey;
+    //   }
+    //   .card-icon {
+    //     padding-top: 0.7rem;
+    //     color: $colorGrey;
+    //   }
+    // }
+    // .stat-value {
+    //   flex: 40%;
+
+    //   font-family: "Source+Sans+Pro", sans-serif;
+    //   font-weight: 300;
+    //   color: $primaryColorDark;
+    //   align-self: center;
+    //   font-size: 4rem;
+    // }
+  }
+}

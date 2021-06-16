@@ -1,0 +1,57 @@
+export default interface IEventsClasses {
+  eventClasses_eventClassID: string;
+  eventClasses_eventID: string;
+  eventClasses_classID: string;
+  eventClasses_name: string;
+  eventClasses_code: string;
+  eventClasses_price: number;
+  eventClasses_serviceFees: number;
+  eventClasses_totalPrice: number;
+  eventClasses_fromPlace: string;
+  eventClasses_toPlace: string;
+  eventClasses_fromAddress: string;
+  eventClasses_toAddress: string;
+  eventClasses_ticketsRangedFrom: number;
+  eventClasses_ticketsRangedTo: number;
+  eventClasses_totalNumberOfTickets: number;
+  eventClasses_availableNumberOfTickets: number;
+  eventClasses_bookedNumberOfTickets: number;
+  eventClasses_isActive: boolean;
+  eventClasses_activatedBy: string;
+  eventClasses_activatedDate: string;
+  eventClasses_deactivatedBy: string;
+  eventClasses_deactivatedDate: string;
+  eventClasses_descriptions: string;
+  eventClasses_createdBy: string;
+  eventClasses_createdDate: string;
+  eventClasses_editedBy: string;
+  eventClasses_editedDate: string;
+  eventClasses_fromPlaceName: string;
+  eventClasses_toPlaceName: string;
+  event_eventID: string;
+  event_productID: string;
+  event_branchID: string;
+  event_subcategoryID: number;
+  event_name: string;
+  event_code: string;
+  event_fromPlace: string;
+  event_toPlace: string;
+  event_fromAddress: string;
+  event_toAddress: string;
+  event_fromDate: string;
+  event_toDate: string;
+  event_fromHours: string;
+  event_toHours: string;
+  event_descriptions: string;
+
+  company_companyID: "a8e660e1-20c4-4dc6-9e89-0855f292d65a";
+  company_name: "IT Bridge";
+  company_phonenumber: "0723344455";
+  company_email: "support@gmail.com";
+  company_websiteUrlLink: "1";
+  company_advertMessage: "Please be there on time";
+  company_imagesLink: "undefined";
+  company_physicalAddress: "39 Alexandra str, Berea";
+
+  eventClasses_currency_iso: string;
+}

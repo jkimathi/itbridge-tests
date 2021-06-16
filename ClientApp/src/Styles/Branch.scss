@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import "./Abstracts/mixins.scss";
+@import "./Abstracts/variables.scss";
+.branch-card {
+  width: 96%;
+  height: 30rem;
+  margin: 0 auto;
+  @include responsiveSite(tab-land) {
+    height: 45rem;
+  }
+  @include responsiveSite(phone) {
+    height: 60rem;
+    margin: 2rem auto;
+  }
+
+  background-color: $colorWhite;
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.2);
+  }
+  .branch-name {
+    flex: 16%;
+
+    padding: 0.5rem 1.5rem;
+
+    h2 {
+      padding: 0.7rem 0;
+      font-size: 1.8rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      color: $colorGrey;
+      span {
+        margin-left: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+  .branch-phone-number {
+    flex: 16%;
+
+    padding: 0.5rem 1.5rem;
+    h2 {
+      padding: 0.7rem 0;
+      font-size: 1.8rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      color: $colorGrey;
+      span {
+        margin-left: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+  // .branch-unique-code {
+  //   flex: 10%;
+
+  //   padding: 0.5rem 1.5rem;
+  //   h2 {
+  //     padding: 0.7rem 0;
+  //     font-size: 1.8rem;
+  //     font-family: "Montserrat", sans-serif;
+  //     font-weight: 400;
+  //     color: $colorGrey;
+  //     span {
+  //       margin-left: 1rem;
+  //       font-weight: 600;
+  //     }
+  //   }
+  // }
+
+  .branch-email {
+    flex: 16%;
+
+    padding: 0.5rem 1.5rem;
+    h2 {
+      // padding: 0.7rem 0;
+      font-size: 1.8rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      color: $colorGrey;
+      span {
+        margin-left: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .branch-physicalAddress {
+    flex: 16%;
+
+    padding: 0.5rem 1.5rem;
+    h2 {
+      // padding: 0.7rem 0;
+      font-size: 1.8rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      color: $colorGrey;
+      span {
+        margin-left: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+  .branch-status {
+    flex: 16%;
+    padding: 0.5rem 1.5rem;
+
+    h2 {
+      padding: 0.7rem 0;
+      font-size: 1.8rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      color: $colorGrey;
+      span {
+        margin-left: 1rem;
+        font-weight: 600;
+      }
+
+      .status-active {
+        background-color: $colorGreen;
+        padding: 0.4rem 1.5rem;
+        border-radius: 0.4rem;
+        color: $colorWhite;
+        font-size: 1.6rem;
+        font-weight: 400;
+        .icon-branch-status {
+          vertical-align: middle;
+          margin-right: 0.7rem;
+        }
+      }
+      .status-not-active {
+        background-color: $colorDanger;
+        padding: 0.4rem 1.5rem;
+        border-radius: 0.4rem;
+        color: $colorWhite;
+        font-size: 1.6rem;
+        font-weight: 400;
+        .icon-branch-status {
+          vertical-align: middle;
+          margin-right: 0.7rem;
+        }
+      }
+    }
+  }
+  .branch-physical-address {
+    flex: 16%;
+
+    padding: 0.5rem 1.5rem;
+    h2 {
+      padding: 0.7rem 0;
+      font-size: 1.8rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      color: $colorGrey;
+      span {
+        margin-left: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+  // .branch-advert {
+  //   flex: 15%;
+  //   padding: 0.5rem 1.5rem;
+  //   h2 {
+  //     padding: 0.7rem 0;
+  //     font-size: 1.8rem;
+  //     font-family: "Montserrat", sans-serif;
+  //     font-weight: 400;
+  //     color: $colorGrey;
+  //     span {
+  //       margin-left: 1rem;
+  //       font-weight: 600;
+  //     }
+  //   }
+  // }
+
+  .branch-action-status {
+    flex: 20%;
+
+    display: flex;
+    align-items: center;
+    @include responsiveSite(phone) {
+      flex-direction: column;
+    }
+    .icon-branch-action {
+      color: $secondaryColorLight;
+      vertical-align: middle;
+      margin-right: 1rem;
+    }
+
+    .icon-branch-action-delete {
+      color: $colorRedLighter;
+      vertical-align: middle;
+      margin-right: 1rem;
+    }
+
+    .branch-action-view {
+      flex: 33.3%;
+      @include responsiveSite(phone) {
+        flex: 100%;
+        width: 100%;
+      }
+
+      text-align: center;
+      font-size: 1.6rem;
+      padding: 1.5rem;
+      cursor: pointer;
+      a {
+        color: $secondaryColorLight;
+      }
+
+      &:hover {
+        background-color: $secondaryColorLight;
+        transition: all 0.3s ease;
+
+        a {
+          color: $colorWhite;
+          transition: all 0.3s ease;
+
+          text-align: center;
+        }
+        .icon-branch-action {
+          color: $colorWhite;
+        }
+      }
+      // .action-link-homepage {
+      //   font-size: 1.4rem;
+      //   text-align: center;
+      //   vertical-align: middle;
+      // }
+    }
+    .branch-action-homepage {
+      flex: 33.3%;
+      @include responsiveSite(phone) {
+        flex: 100%;
+        width: 100%;
+      }
+      text-align: center;
+      font-size: 1.6rem;
+      padding: 1.5rem;
+      cursor: pointer;
+      a {
+        color: $secondaryColorLight;
+      }
+
+      &:hover {
+        background-color: $secondaryColorLight;
+        transition: all 0.3s ease;
+
+        a {
+          color: $colorWhite;
+          transition: all 0.3s ease;
+
+          text-align: center;
+        }
+        .icon-branch-action {
+          color: $colorWhite;
+        }
+      }
+    }
+    .branch-action-delete {
+      flex: 33.3%;
+      @include responsiveSite(phone) {
+        flex: 100%;
+        width: 100%;
+      }
+      text-align: center;
+      font-size: 1.6rem;
+      padding: 1.5rem;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      outline: none;
+      height: 100%;
+      color: $colorRedLighter;
+      //background-color: $colorRedLighter;
+      a {
+        color: $secondaryColorLight;
+      }
+
+      &:hover {
+        background-color: $colorRed;
+        transition: all 0.3s ease;
+
+        color: $colorWhite;
+
+        text-align: center;
+
+        .icon-branch-action {
+          color: $colorWhite;
+        }
+
+        .icon-branch-action-delete {
+          color: $colorWhite;
+          vertical-align: middle;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}

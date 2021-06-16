@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import "./Abstracts/mixins.scss";
+@import "./Abstracts/variables.scss";
+
+.newevent {
+  height: auto;
+
+  //flex-direction: column;
+  .newevent-container {
+    display: flex;
+
+    .page-left-navigation {
+      flex: 20%;
+    }
+
+    .page-left-navigation-hidden {
+      display: none;
+    }
+
+    .page-top-right-navigation-page-content {
+      flex: 80%;
+      display: flex;
+
+      flex-direction: column;
+
+      .top-right-navigation {
+        flex: 8%;
+      }
+      .page-content {
+        flex: 82%;
+        height: auto;
+        min-height: 60rem;
+        .new-event {
+          height: auto;
+          //background-color: white;
+
+          padding: 3rem 0;
+          .new-event-form-container {
+            width: 96%;
+            margin: 0 auto;
+            padding: 2rem;
+            .new-event-container-header {
+              // flex: 20%;
+              height: 14rem;
+
+              .page-header-new-event {
+                font-size: 2.7rem;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+
+                margin-bottom: 1.5rem;
+                border-bottom: 1px dotted $colorGrey;
+              }
+            }
+
+            .create-event-alert {
+              background-color: $colorAlertBackground;
+              border-color: transparent;
+              color: $colorAlert;
+              padding: 1rem;
+              font-size: 1.6rem;
+              height: 5rem;
+            }
+            .loader-icon-create-event {
+              height: 8rem;
+              width: auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            //required field label
+            .required-field {
+              color: $colorRed;
+              font-size: 1.4rem;
+            }
+
+            .container-payment-option-not-found {
+              position: relative;
+
+              .payment-option-not-found {
+                top: 50%;
+                left: 50%;
+                position: absolute;
+
+                width: 80%;
+                transform: translate(-50%, -50%);
+                .container-no-payment-option-found-icon {
+                  text-align: center;
+                  color: $colorDanger;
+                }
+                .container-no-payment-option-found-text {
+                  text-align: center;
+                  h2 {
+                    font-size: 2.2rem;
+                    font-weight: 400;
+                    font-family: "Montserrat", sans-serif;
+                    margin-bottom: 2rem;
+                  }
+
+                  .link-create-payment-option {
+                    margin: 2rem auto;
+
+                    font-size: 1.4rem;
+                    background-color: $secondaryColorLight;
+
+                    //       $secondaryColorLight: #4680ff;
+                    // $secondaryColor: #1a62ff;
+                    padding: 1rem;
+
+                    color: $colorWhite;
+                    &:hover {
+                      background-color: $secondaryColor;
+                    }
+
+                    .icon-add-payment-option {
+                      vertical-align: middle;
+                      margin-right: 0.5rem;
+                    }
+                  }
+                }
+              }
+            }
+
+            .form-new-event {
+              display: flex;
+              @include responsiveSite(tab-land) {
+                flex-direction: column;
+              }
+              .form-new-event-left {
+                flex: 50%;
+                padding: 1rem 1rem 1rem 0;
+
+                .form-control {
+                  height: 4rem;
+                  width: 100%;
+                  position: relative;
+                  margin: 3rem auto;
+
+                  input {
+                    width: 100%;
+
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    border-bottom: 2px solid silver;
+                    font-size: 1.7rem;
+                  }
+                  label {
+                    position: absolute;
+                    bottom: 3rem;
+                    left: 0;
+                    color: $primaryColor;
+                    pointer-events: none;
+                    font-size: 1.5rem;
+                    transition: all 0.3s ease;
+                  }
+
+                  select {
+                    width: 100%;
+
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    border-bottom: 2px solid silver;
+                    font-size: 1.7rem;
+                  }
+                }
+                .form-control-auto-complete {
+                  height: 4rem;
+                  width: 100%;
+                  position: relative;
+                  margin: 3rem auto 0 auto;
+                  // background-color: white;
+                  input {
+                    width: 100%;
+
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    border-bottom: 2px solid silver;
+                    font-size: 1.7rem;
+                  }
+                  label {
+                    position: absolute;
+                    bottom: 3rem;
+                    left: 0;
+                    color: #4680ff;
+                    pointer-events: none;
+                    font-size: 1.5rem;
+                    transition: all 0.3s ease;
+                  }
+                }
+
+                .result-search-suggestion {
+                  background-color: rgb(236, 240, 245);
+
+                  height: auto;
+                  .result-search-loader {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  }
+
+                  .result-search-error-text {
+                    h3 {
+                      font-family: "Montserrat", sans-serif;
+                      font-size: 1.6rem;
+                      font-weight: 400;
+                      text-align: center;
+                      color: $colorDanger;
+                    }
+                  }
+
+                  .error-search-message {
+                    font-size: 1.6rem;
+                    color: $colorDanger;
+                  }
+                  .result-search-suggestion-items {
+                    ul {
+                      list-style: none;
+                      padding: 0 0.7rem;
+                      li {
+                        color: #4680ff;
+                        border-radius: 0.8rem;
+                        padding: 0.5rem;
+                        display: flex;
+                        justify-content: center;
+                        /**
+                          font-size: 1.6rem;
+                                padding: 0.5rem;
+                                border-radius: 0.8rem;
+                                display: flex;
+                                justify-content: center;*/
+
+                        .icon {
+                          flex: 15%;
+                          color: #777;
+                          vertical-align: middle;
+
+                          margin: auto 0;
+                        }
+                        .city-data {
+                          flex: 85%;
+                          display: flex;
+
+                          flex-direction: column;
+                          .city {
+                            flex: 100%;
+                            max-height: 2.2rem;
+                            span {
+                              font-size: 1.8rem;
+                              font-weight: 400;
+                              font-family: "Montserrat", sans-serif;
+                              color: #777;
+                            }
+                          }
+                          .country {
+                            max-height: 2.2rem;
+                            span {
+                              font-size: 1.4rem;
+                              font-weight: 400;
+                              font-family: "Montserrat", sans-serif;
+                              color: #4680ff;
+                            }
+                          }
+                        }
+                        &:hover {
+                          background-color: #4680ff;
+                          color: white;
+                          cursor: pointer;
+                          .icon {
+                            color: white;
+                          }
+                          .city {
+                            span {
+                              color: white;
+                            }
+                          }
+                          .country {
+                            span {
+                              color: white;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .form-new-event-right {
+                flex: 50%;
+                padding: 1rem 2rem;
+                @include responsiveSite(tab-land) {
+                  padding: 0;
+                }
+
+                .form-control {
+                  height: 4rem;
+                  width: 100%;
+                  position: relative;
+                  margin: 3rem auto;
+                  input {
+                    width: 100%;
+
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    border-bottom: 2px solid silver;
+                    font-size: 1.7rem;
+                  }
+
+                  label {
+                    position: absolute;
+                    bottom: 3rem;
+                    left: 0;
+                    color: $primaryColor;
+                    pointer-events: none;
+                    font-size: 1.5rem;
+                    transition: all 0.3s ease;
+                  }
+                }
+              }
+            }
+          }
+
+          .btn-create-event {
+            width: 20%;
+            height: 4rem;
+            margin: 0.2rem auto;
+            background-color: $secondaryColorLight;
+
+            border: none;
+            color: white;
+            font-size: 1.7rem;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            display: inline-block;
+            outline: none;
+
+            &:hover {
+              background-color: $primaryColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import "./Abstracts/mixins.scss";
+
+.login {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .navigation {
+    flex: 20%;
+
+    height: 100%;
+  }
+  .login-container {
+    flex: 80%;
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    .login-left {
+      flex: 70%;
+      @include responsiveSite(tab-land) {
+        display: none;
+      }
+
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+        url("../Assets/pexels-pixabay-269077.jpg");
+      background-position: center;
+      height: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .text-container {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+
+        .company-name {
+          h2 {
+            color: white;
+            font-size: 6rem;
+            font-family: "Montserrat", sans-serif;
+          }
+          h3 {
+            color: white;
+            font-size: 3.5rem;
+            font-family: "Montserrat", sans-serif;
+          }
+        }
+        .company-intro {
+          p {
+            color: white;
+            font-size: 2.5rem;
+            color: white;
+
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            line-height: 1;
+          }
+        }
+        .support-team {
+          margin-top: 2.5rem;
+          p {
+            color: white;
+            font-size: 1.8rem;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            a {
+              padding-left: 1rem;
+              text-decoration: none;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+    //required field label
+    .required-field {
+      color: red;
+      font-size: 1.4rem;
+    }
+    .login-right {
+      flex: 30%;
+      background-color: white;
+      .alert {
+        background-color: #faebeb;
+        border-color: transparent;
+        color: #521822;
+      }
+
+      .form-container {
+        width: 90%;
+        margin: 20vh auto;
+        @include responsiveSite(tab-land) {
+          width: 40%;
+          margin: 20vh auto;
+        }
+
+        @include responsiveSite(tab-port) {
+          width: 50%;
+          margin: 20vh auto;
+        }
+
+        @include responsiveSite(phone) {
+          width: 80%;
+          margin: 20vh auto;
+        }
+
+        h1 {
+          font-size: 3rem;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 400;
+          text-align: center;
+        }
+        .loader-icon-login {
+          height: 8rem;
+          width: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .login-alert {
+          background-color: #faebeb;
+          border-color: transparent;
+          color: #521822;
+          height: auto;
+          font-size: 1.6rem;
+          padding: 1rem;
+          line-height: 1.3;
+          margin: 2rem auto;
+        }
+
+        .form-control {
+          height: 4rem;
+          width: 100%;
+          position: relative;
+          margin: 4.5rem auto;
+
+          input {
+            width: 100%;
+
+            height: 100%;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            border-bottom: 2px solid silver;
+            font-size: 1.7rem;
+          }
+          label {
+            position: absolute;
+            bottom: 3rem;
+            left: 0;
+            color: #4680ff;
+            pointer-events: none;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+          }
+
+          .btn-auth {
+            width: 100%;
+            height: 4rem;
+            margin: 0.2rem auto;
+            background-color: #4680ff;
+
+            border: none;
+            color: white;
+            font-size: 1.7rem;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            display: inline-block;
+            outline: none;
+
+            &:hover {
+              background-color: #1a62ff;
+            }
+          }
+
+          .btn-auth-hidden {
+            display: none;
+          }
+        }
+
+        //
+
+        //
+        .link-to-sign-in-help {
+          p {
+            text-align: center;
+            color: gray;
+            font-size: 1.6rem;
+            span {
+              color: #1a62ff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
