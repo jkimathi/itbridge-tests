@@ -79,9 +79,9 @@ const Footer = () => {
                             <div className="footer__top-content">
                                 <h4>Newsroom</h4>
                                 <ul>
+                                    {/* <li>Testing</li>
                                     <li>Testing</li>
-                                    <li>Testing</li>
-                                    <li>Testing</li>
+                                    <li>Testing</li> */}
                                 </ul>
                             </div>
                         </div>
